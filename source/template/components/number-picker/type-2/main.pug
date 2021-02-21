@@ -1,0 +1,15 @@
+mixin number-picker2(type, minValue = 1, maxValue)
+	-let elementClassList
+
+	if type == 1
+		- elementClassList = ["picker-number_type-2", "picker-number_type-2_hover-1"]
+	else if type == 2
+		- elementClassList = ["picker-number_type-2", "picker-number_type-2_hover-2"]
+
+	div(class=['picker-number'] class=elementClassList)
+		button(class="picker-number__button picker-number__button_dec") -
+		if(maxValue)
+			input(class="picker-number__input" type="number" value="1" step="1" min=minValue max=maxValue)
+		else 
+			input(class="picker-number__input" type="number" value="1" step="1" min=minValue)
+		button(class="picker-number__button picker-number__button_inc") +
