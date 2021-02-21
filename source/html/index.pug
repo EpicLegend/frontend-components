@@ -1,0 +1,13 @@
+extends base.pug
+block content
+	include ../template/mixin.pug
+
+	div(class="container py-5")
+		div(class="row py-5")
+			div(class="col-12")
+				div(class="py-2")
+					+number-picker1( ["picker-number_type-1", "picker-number_type-1_hover-1"], 1, 50 )
+				div(class="py-2")
+					+number-picker1( ["picker-number_type-1", "picker-number_type-1_hover-2"], 10 )
+				div(class="py-2")
+					+number-picker1( ["picker-number_type-1", "picker-number_type-1_hover-2"] )
