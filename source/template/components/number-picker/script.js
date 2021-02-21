@@ -57,19 +57,19 @@ START COMPONENT picker-number( Cart Plus Minus Button )
 
 	// Событие на изменение значений
 	// ввода в input(с помощью клавиатуры)
-	numberPickers.forEach(function(item){
+	numberPickers.forEach(function(item) {
 		
 		item.querySelector(".picker-number__input").addEventListener("input", function (e) {
 
 			const minValue = parseInt( this.getAttribute("min") );
 			const maxValue = parseInt( this.getAttribute("max") );
 
+			this.value = parseInt(this.value)
+
 			if (maxValue) {
 
 				if ( this.value >= maxValue) {
 					this.value = maxValue;
-				} else if ( this.value <= minValue) {
-					this.value = minValue;
 				}
 
 			}
