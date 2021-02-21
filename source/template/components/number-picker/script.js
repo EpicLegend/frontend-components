@@ -61,8 +61,8 @@ START COMPONENT picker-number( Cart Plus Minus Button )
 		
 		item.querySelector(".picker-number__input").addEventListener("input", function (e) {
 
-			var minValue = parseInt( this.getAttribute("min") );
-			var maxValue = parseInt( this.getAttribute("max") );
+			const minValue = parseInt( this.getAttribute("min") );
+			const maxValue = parseInt( this.getAttribute("max") );
 
 			if (maxValue) {
 

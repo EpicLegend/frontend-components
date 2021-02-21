@@ -1,5 +1,5 @@
-mixin number-picker1(type, minValue = 1, maxValue)
-	-let elementClassList = type
+mixin number-picker1( minValue = 1, maxValue )
+	-let elementClassList = ["picker-number_type-1", "picker-number_type-1_hover-1"]
 	div(class=['picker-number'] class=elementClassList)
 		button(class="picker-number__button picker-number__button_dec") -
 		if(maxValue)
