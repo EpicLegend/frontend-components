@@ -1,0 +1,76 @@
+.picker-number {
+    &.picker-number_type-3 {
+        width: 100px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .picker-number__button {
+            box-sizing: border-box;
+
+            border: 1px solid transparent;
+            border-radius: 100%;
+            background-color: $templateColorNumberPicker;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            min-height: 30px;
+            padding: 0px;            
+
+            font-size: 18px;
+            color: #E5E5E5;
+
+            transition: 
+                box-shadow $templateTransition ease,
+                color $templateTransition ease,
+                border-color $templateTransition ease,
+                background-color $templateTransition ease,
+                transform $templateTransition / 4 ease;
+            &:hover {
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+                border: 1px solid $templateColorNumberPicker;
+            }
+            &:focus {
+                outline: none;
+            }
+            &:active {
+                transform: scale(1.14);
+            }
+        }
+        .picker-number__input {
+            box-sizing: border-box;
+
+            font-size: 18px;
+            height: 100%;
+
+
+            width: calc(100% - 60px);
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+            background: none;
+
+            text-align: center;
+
+            &[type='number'] { -moz-appearance:textfield; }
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button { -webkit-appearance: none; }
+        }
+
+        &.picker-number_type-3_hover-1 {
+            .picker-number__button {
+                &:hover {
+                    color: $templateColorNumberPicker;
+                    border-color: $templateColorNumberPicker;
+                    background: none;
+                }
+            }
+        }
+    }
+}
